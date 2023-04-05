@@ -1,0 +1,53 @@
+.filter
+    &__select
+        position: relative
+    &__header
+        position: relative
+        border: 1px solid #A9A9A9
+        border-radius: 5px
+        padding: 4px 9px
+        cursor: pointer
+        transition: all .3s ease
+        font-size: 13px
+        &.active
+            border-bottom-right-radius: 0
+            border-bottom-left-radius: 0
+            border-bottom: none
+    &__icon
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        transition: all .3s ease
+        &.active
+            transform: translateY(-50%) rotate(180deg)
+    &__body
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 9px
+        transform: translateY(100%)
+        padding: 4px 9px
+        opacity: 0
+        visibility: hidden
+        transition: all .3s ease
+        background: #232324
+        border: 1px solid #A9A9A9
+        border-top: none
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        &.active
+            visibility: visible
+            opacity: 1
+        &_item
+            transition: color .3s ease
+            color: #A9A9A9
+            cursor: pointer
+            font-size: 12px
+            &:hover
+                color: #FFFFFF
+        @media (max-width: 750px)
+            gap: 15px

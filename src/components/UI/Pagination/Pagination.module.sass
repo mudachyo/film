@@ -1,0 +1,21 @@
+.pagination
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 15px
+    &__item
+        cursor: pointer
+        width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        background: #535353
+        transition: all .3s ease
+        &:hover
+            background: #F71A2C
+        &.selected
+            background: #F71A2C
+    &__container
+        margin-top: 50px
